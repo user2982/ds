@@ -23,7 +23,7 @@ class Graph:
             current_distance, current_node = heapq.heappop(priority_queue)
 
             # Skip nodes that have already been processed with a shorter distance
-            if current_distance > distances[current_node]:
+            if distances[current_node] < current_distance:
                 continue
 
             # Check the neighbors of the current node
